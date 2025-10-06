@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бренд-Платформа TANGENS: Течение</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Настройка шрифта Inter */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f7; /* Цвет "Песка" - начало */
+        }
+        /* Кастомный класс для мягкого градиента погружения */
+        .water-gradient {
+            background: linear-gradient(180deg, 
+                #f7f7f7 0%,      /* Песок */
+                #f7f7f7 10%,     /* Поверхность */
+                #E0F7FA 30%,     /* Светлая вода */
+                #B3E5FC 60%,     /* Чистая вода */
+                #0288D1 90%,     /* Глубина */
+                #01579B 100%     /* Глубокая синева */
+            );
+            background-attachment: fixed; /* Фиксируем градиент для эффекта "воды" */
+        }
+
+        .section-card {
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .wave-ripple {
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+        .wave-ripple:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(2, 136, 209, 0.3);
+        }
+
+        /* Класс для эффекта "блика" на активном элементе */
+        .glow-active {
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 25px rgba(2, 136, 209, 0.5);
+        }
+    </style>
+</head>
+<body class="water-gradient">
+
+    <!-- 1. Фиксированный Заголовок и Суть Бренда -->
+    <header class="sticky top-0 z-50 p-4 shadow-lg text-center bg-white/80 backdrop-blur-sm rounded-b-xl">
+        <h1 class="text-3xl font-extrabold text-[#0288D1] uppercase">TANGENS</h1>
+        <p id="essence-text" class="text-lg mt-1 font-medium text-gray-700 transition-opacity duration-1000 opacity-100">
+            Спутник на пути к себе в воде.
+        </p>
+    </header>
+
+    <!-- Главный Контент -->
+    <main class="max-w-4xl mx-auto p-4 md:p-8 space-y-12 mt-4">
+
+        <!-- Секция 2: Миссия и Видение (Свобода от Стресса) -->
+        <section class="section-card p-6 md:p-8 rounded-2xl shadow-xl">
+            <h2 class="text-2xl font-bold mb-4 text-[#01579B]">МИССИЯ & ВИДЕНИЕ</h2>
+            <div class="space-y-6">
+                
+                <!-- Миссия с акцентом на стрессе -->
+                <div class="border-l-4 border-[#0288D1] pl-4">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Миссия: Личный Ритуал Восстановления</h3>
+                    <p class="text-gray-600">
+                        Помогать людям возвращаться к себе, используя движение в воде как осознанный способ <strong>ухода от ежедневного стресса</strong>. Tangens превращает плавание из тренировки в личный ритуал восстановления.
+                    </p>
+                </div>
+                
+                <!-- Видение -->
+                <div class="border-l-4 border-gray-400 pl-4">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Видение: Равновесие в Потоке</h3>
+                    <p class="text-gray-600">
+                        Изменить отношение к плаванию: из дисциплины и спорта — в **личное пространство силы, свободы и внутреннего равновесия**.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция 3: Архетип и Позиционирование (Компас Искателя) -->
+        <section class="section-card p-6 md:p-8 rounded-2xl shadow-xl">
+            <h2 class="text-2xl font-bold mb-6 text-[#01579B]">АРХЕТИП & ПОЗИЦИОНИРОВАНИЕ</h2>
+
+            <div class="flex flex-col md:flex-row gap-6">
+                <!-- Архетип Искатель -->
+                <div class="flex-1 bg-gray-50 p-4 rounded-xl border border-gray-200">
+                    <div class="text-4xl mb-2 text-[#0288D1]">🧭</div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Архетип: Искатель (Explorer)</h3>
+                    <p class="text-sm text-gray-600">
+                        **Нарратив:** Искатель даёт **карту и компас** для личного открытия. Tangens вдохновляет на поиск **собственного течения** — это процесс, а не пункт назначения.
+                    </p>
+                </div>
+
+                <!-- Позиционирование (Весы Баланса) -->
+                <div class="flex-1 bg-gray-50 p-4 rounded-xl border border-gray-200">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Позиционирование: Точка Равновесия</h3>
+                    <div class="flex justify-around items-center mt-4">
+                        <div class="text-center">
+                            <p class="text-lg font-bold text-red-500">НЕ РЕКОРДЫ</p>
+                            <p class="text-sm text-gray-500">НЕ РЕЗУЛЬТАТ</p>
+                        </div>
+                        <div class="text-5xl text-gray-400 mx-4">↔️</div>
+                        <div class="text-center">
+                            <p class="text-lg font-bold text-green-600">А ПРОЦЕСС</p>
+                            <p class="text-sm text-gray-500">А ОЩУЩЕНИЕ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция 3.5: Целевая Аудитория -->
+        <section class="section-card p-6 md:p-8 rounded-2xl shadow-xl">
+            <h2 class="text-2xl font-bold mb-6 text-[#01579B]">ЦЕЛЕВАЯ АУДИТОРИЯ: ПУТЕШЕСТВЕННИКИ</h2>
+            <p class="text-lg text-gray-700 mb-6">
+                Tangens ориентирован на людей, для которых плавание — это не гонка, а личное пространство, где можно перезагрузиться и восстановиться.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Сегмент 1: Профессионалы, ищущие баланс -->
+                <div class="p-4 bg-[#E0F7FA] rounded-xl border border-[#B3E5FC]">
+                    <div class="text-3xl mb-2 text-[#0288D1]">🧘</div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">1. Искатели Баланса</h3>
+                    <p class="text-sm text-gray-600">
+                        Успешные, но перегруженные работой люди (28–45 лет), использующие воду для **ментальной разгрузки** и снятия стресса. Для них плавание — это терапия и медитация.
+                    </p>
+                </div>
+                <!-- Сегмент 2: Осознанные Двигатели -->
+                <div class="p-4 bg-[#E0F7FA] rounded-xl border border-[#B3E5FC]">
+                    <div class="text-3xl mb-2 text-[#0288D1]">🔄</div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">2. Осознанные Двигатели</h3>
+                    <p class="text-sm text-gray-600">
+                        Те, кто ценит **процесс, технику и постоянство** (от 25 лет). Им не важны рекорды, важна связь с телом и качество движения.
+                    </p>
+                </div>
+                <!-- Сегмент 3: Новички и Возвращающиеся -->
+                <div class="p-4 bg-[#E0F7FA] rounded-xl border border-[#B3E5FC]">
+                    <div class="text-3xl mb-2 text-[#0288D1]">🚀</div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">3. Стартующие с нуля</h3>
+                    <p class="text-sm text-gray-600">
+                        Начинающие пловцы или те, кто возвращается в воду после долгого перерыва. Им нужна **поддержка, простота** и инструменты, которые внушают уверенность.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция 4: Ценности (Интерактивные Волны) -->
+        <section class="section-card p-6 md:p-8 rounded-2xl shadow-xl">
+            <h2 class="text-2xl font-bold mb-6 text-[#01579B]">ЦЕННОСТИ: РЯБЬ И БАЛАНС</h2>
+            
+            <div id="values-container" class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <!-- Значения будут заполнены JS -->
+            </div>
+
+            <div id="value-detail" class="mt-8 p-4 bg-[#E0F7FA] rounded-xl text-gray-700 hidden transition-all duration-300">
+                <p class="font-bold text-lg mb-1 text-[#0288D1]" id="value-title"></p>
+                <p id="value-description"></p>
+            </div>
+        </section>
+
+        <!-- Секция 5: Продуктовая Философия (Карта Маршрута) -->
+        <section class="section-card p-6 md:p-8 rounded-2xl shadow-xl">
+            <h2 class="text-2xl font-bold mb-6 text-[#01579B]">ПРОДУКТОВАЯ ФИЛОСОФИЯ: МАРШРУТ К СЕБЕ</h2>
+            <div class="relative flex flex-col items-center py-4">
+                
+                <!-- Центральная Линия (Маршрут) -->
+                <div class="absolute inset-y-0 w-1 bg-[#B3E5FC] rounded-full"></div>
+
+                <!-- Шаги Маршрута -->
+                <div class="flex w-full items-center justify-start relative my-4">
+                    <div class="w-1/2 pr-8 text-right">
+                        <h3 class="text-xl font-semibold text-gray-800">Антифог</h3>
+                        <p class="text-sm text-gray-600">Помогает **видеть путь**, устраняя мутность и сомнения.</p>
+                    </div>
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-[#0288D1] rounded-full shadow-lg border-2 border-white"></div>
+                </div>
+
+                <div class="flex w-full items-center justify-end relative my-4">
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-[#0288D1] rounded-full shadow-lg border-2 border-white"></div>
+                    <div class="w-1/2 pl-8">
+                        <h3 class="text-xl font-semibold text-gray-800">Шапочка & Очки</h3>
+                        <p class="text-sm text-gray-600">Сохраняют **комфорт и фокус**, позволяя сосредоточиться на внутреннем течении.</p>
+                    </div>
+                </div>
+                
+                <div class="flex w-full items-center justify-start relative my-4">
+                    <div class="w-1/2 pr-8 text-right">
+                        <h3 class="text-xl font-semibold text-gray-800">Полотенце</h3>
+                        <p class="text-sm text-gray-600">Символизирует **возвращение на берег**, к равновесию и теплу после пути.</p>
+                    </div>
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-[#0288D1] rounded-full shadow-lg border-2 border-white"></div>
+                </div>
+
+                <div class="flex w-full items-center justify-end relative my-4">
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-[#0288D1] rounded-full shadow-lg border-2 border-white"></div>
+                    <div class="w-1/2 pl-8">
+                        <h3 class="text-xl font-semibold text-gray-800">Косметика</h3>
+                        <p class="text-sm text-gray-600">**Продолжает заботу** о теле после стихии, интегрируя ритуал в повседневную жизнь.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Секция 6: Tone of Voice (Заключительный аккорд) -->
+        <section class="section-card p-6 md:p-8 rounded-2xl shadow-xl mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-[#01579B]">TONE OF VOICE: ГОЛОС НАСТАВНИКА</h2>
+            <p class="text-lg text-gray-700 mb-4 italic">
+                Мягкий, уверенный, человеческий. Голос наставника, который не кричит, а направляет.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                <p class="p-3 bg-[#E0F7FA] text-[#0288D1] font-semibold rounded-lg hover:bg-[#B3E5FC] transition duration-300">Вода знает путь</p>
+                <p class="p-3 bg-[#E0F7FA] text-[#0288D1] font-semibold rounded-lg hover:bg-[#B3E5FC] transition duration-300">Ты можешь начать с этой точки</p>
+                <p class="p-3 bg-[#E0F7FA] text-[#0288D1] font-semibold rounded-lg hover:bg-[#B3E5FC] transition duration-300">Ощути свободу движения</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- JavaScript для интерактивных эффектов -->
+    <script>
+        const valuesData = [
+            { title: "ДВИЖЕНИЕ (Поток)", description: "Вода учит: всё живое течёт. Мы ценим само усилие и готовность двигаться вперед, даже если это маленький шаг." },
+            { title: "ПРОСТОТА (Ясность)", description: "Мы делаем плавание понятным и комфортным для каждого. Продукты должны быть интуитивными и честными в своих возможностях." },
+            { title: "БАЛАНС (Гармония)", description: "Tangens помогает найти точку равновесия между усилием и расслаблением, между дисциплиной и удовольствием." },
+            { title: "ЧЕСТНОСТЬ (Правда)", description: "Мы не обещаем невозможного или мгновенного успеха. Мы честны в качестве и в поддержке реального пути." }
+        ];
+
+        const valuesContainer = document.getElementById('values-container');
+        const valueDetail = document.getElementById('value-detail');
+        const valueTitle = document.getElementById('value-title');
+        const valueDescription = document.getElementById('value-description');
+
+        let activeValue = null;
+
+        // Инициализация карточек ценностей (Волн)
+        valuesData.forEach((item, index) => {
+            const card = document.createElement('div');
+            card.className = 'wave-ripple p-4 text-center rounded-full bg-[#B3E5FC]/50 flex flex-col justify-center items-center aspect-square shadow-md hover:shadow-xl hover:bg-[#B3E5FC] transition duration-300';
+            card.setAttribute('data-index', index);
+            card.innerHTML = `<span class="text-lg font-bold text-[#01579B]">${item.title.split(' ')[0]}</span>`;
+            
+            card.addEventListener('click', () => {
+                const clickedIndex = parseInt(card.getAttribute('data-index'));
+                
+                // Сброс всех активных состояний
+                document.querySelectorAll('.wave-ripple').forEach(ripple => {
+                    ripple.classList.remove('glow-active');
+                    ripple.classList.remove('bg-[#0288D1]');
+                    ripple.classList.add('bg-[#B3E5FC]/50');
+                });
+
+                if (activeValue === clickedIndex) {
+                    // Скрываем, если кликнули на активную карточку
+                    valueDetail.classList.add('hidden');
+                    activeValue = null;
+                } else {
+                    // Активируем новую карточку
+                    card.classList.add('glow-active', 'bg-[#0288D1]');
+                    card.classList.remove('bg-[#B3E5FC]/50');
+
+                    valueTitle.textContent = item.title;
+                    valueDescription.textContent = item.description;
+                    valueDetail.classList.remove('hidden');
+                    activeValue = clickedIndex;
+
+                    // Прокрутка к деталям ценности
+                    valueDetail.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+
+            valuesContainer.appendChild(card);
+        });
+
+        // Эффект спокойствия при наведении на "уход от ежедневного стресса"
+        const missionP = document.querySelector('p.text-gray-600');
+        const stressPhrase = missionP ? missionP.querySelector('strong') : null;
+        const body = document.body;
+
+        if (stressPhrase) {
+            stressPhrase.addEventListener('mouseenter', () => {
+                body.style.transition = 'background-color 0.5s ease-in-out';
+                body.style.backgroundColor = '#E0F7FA'; // Более светлый, спокойный цвет
+                // В реальном приложении здесь можно было бы временно остановить анимацию фона
+            });
+
+            stressPhrase.addEventListener('mouseleave', () => {
+                body.style.transition = 'background-color 0.8s ease-in-out';
+                body.style.backgroundColor = '#f7f7f7'; // Возврат к начальному цвету
+            });
+        }
+        
+    </script>
+</body>
+</html>
